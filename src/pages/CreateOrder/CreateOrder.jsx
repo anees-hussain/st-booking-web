@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import API from "../../api/API";
+import API from "../../api/api";
 import ProductModal from "../../components/ProductModal/ProductModal";
 
 import "../Home/Home.css";
