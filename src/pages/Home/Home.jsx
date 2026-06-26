@@ -4,7 +4,7 @@ import "./Home.css";
 import API from "../../api/api";
 import ProductModal from "../../components/ProductModal/ProductModal";
 
-const SALESMAN_PHONE = "+923006838039";
+const SALESMAN_PHONE = "+923032075886";
 
 const Home = () => {
   const navigate = useNavigate();
