@@ -1,0 +1,280 @@
+/* ===========================================
+   GLOBAL
+=========================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f7fb;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===========================================
+   HOME
+=========================================== */
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  width: 100%;
+  max-width: 650px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ===========================================
+   HEADINGS
+=========================================== */
+
+.logo {
+  text-align: center;
+  margin: 0;
+  color: #0d6efd;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.card h2 {
+  text-align: center;
+  margin: 10px 0 30px;
+  color: #444;
+  font-weight: 500;
+}
+
+/* ===========================================
+   FORM
+=========================================== */
+
+input,
+select {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  font-size: 15px;
+  background: white;
+  color: black;
+  outline: none;
+  transition: 0.25s;
+}
+
+input:focus,
+select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+
+button {
+  cursor: pointer;
+  transition: 0.25s;
+  border: none;
+}
+
+.primary,
+.submit,
+.reset {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.primary {
+  background: #0d6efd;
+  color: white;
+}
+
+.primary:hover {
+  background: #0b5ed7;
+}
+
+.submit {
+  background: #198754;
+  color: white;
+}
+
+.submit:hover {
+  background: #157347;
+}
+
+.submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.reset {
+  background: #dc3545;
+  color: white;
+}
+
+.reset:hover {
+  background: #bb2d3b;
+}
+
+.contact-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #17a2b8;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.contact-btn:hover {
+  background: #138496;
+}
+
+.login-link {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  color: #0d6efd;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-link:hover {
+  color: #0a58ca;
+}
+
+/* ===========================================
+   SUMMARY
+=========================================== */
+
+.summary {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #ececec;
+}
+
+.summary h3 {
+  margin: 0;
+  color: #333;
+}
+
+.summary h2 {
+  margin: 10px 0 20px;
+  color: #198754;
+  text-align: left;
+  font-size: 28px;
+}
+
+/* ===========================================
+   SELECTED PRODUCTS
+=========================================== */
+
+.selected-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.selected-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #ececec;
+}
+
+.selected-item span:first-child {
+  font-weight: 600;
+  color: #333;
+}
+
+.selected-item span:last-child {
+  color: #666;
+  font-size: 14px;
+}
+
+/* ===========================================
+   MOBILE
+=========================================== */
+
+@media (max-width: 768px) {
+  .home {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: none;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .card h2 {
+    font-size: 22px;
+    margin-bottom: 22px;
+  }
+
+  input,
+  select {
+    padding: 13px;
+    font-size: 15px;
+  }
+
+  .primary,
+  .submit,
+  .reset {
+    padding: 13px;
+    font-size: 15px;
+  }
+
+  .summary h2 {
+    font-size: 24px;
+  }
+
+  .selected-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+/* ===========================================
+   LARGE DEVICES
+=========================================== */
+
+@media (min-width: 992px) {
+  .card {
+    margin-top: 40px;
+  }
+}
