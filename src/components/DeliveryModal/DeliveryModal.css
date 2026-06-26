@@ -1,0 +1,211 @@
+/* ==========================================
+   OVERLAY
+========================================== */
+
+.delivery-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.2s ease;
+}
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.delivery-modal {
+  width: 450px;
+  max-width: 95%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  animation: popup 0.25s ease;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.delivery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.delivery-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.close-btn {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  background: #f3f4f6;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.25s;
+}
+
+.close-btn:hover {
+  background: #e5e7eb;
+}
+
+/* ==========================================
+   ORDER SUMMARY
+========================================== */
+
+.order-summary {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.order-summary p {
+  margin: 0 0 14px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.order-summary p:last-child {
+  margin-bottom: 0;
+}
+
+.order-summary strong {
+  color: #111827;
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 0 14px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.25s;
+  background: white;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.12);
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.delivery-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.delivery-actions button {
+  flex: 1;
+  height: 48px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.cancel-btn {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.cancel-btn:hover {
+  background: #d1d5db;
+}
+
+.confirm-btn {
+  background: #198754;
+  color: white;
+}
+
+.confirm-btn:hover {
+  background: #157347;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+  .delivery-modal {
+    width: 100%;
+    margin: 15px;
+    padding: 20px;
+  }
+
+  .delivery-header h2 {
+    font-size: 20px;
+  }
+
+  .delivery-actions {
+    flex-direction: column;
+  }
+
+  .delivery-actions button {
+    width: 100%;
+  }
+}
