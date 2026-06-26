@@ -1,0 +1,184 @@
+/* ==========================================
+   OVERLAY
+========================================== */
+
+.filter-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  z-index: 9999;
+  animation: fadeIn 0.2s ease;
+}
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.filter-modal {
+  width: 380px;
+  max-width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 24px;
+  overflow-y: auto;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.18);
+  animation: slideIn 0.25s ease;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.filter-header h2 {
+  margin: 0;
+  font-size: 26px;
+  color: #111827;
+  font-weight: 700;
+}
+
+.close-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  color: red;
+  background: #4f0501;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  background: #4d0603;
+}
+
+/* ==========================================
+   FILTER GROUP
+========================================== */
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #444;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.filter-group select,
+.filter-group input {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 0 14px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+  background: white;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.12);
+}
+
+/* ==========================================
+   ACTIONS
+========================================== */
+
+.filter-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.filter-actions button {
+  flex: 1;
+  height: 48px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.clear-btn {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.clear-btn:hover {
+  background: #d1d5db;
+}
+
+.apply-btn {
+  background: #0d6efd;
+  color: white;
+}
+
+.apply-btn:hover {
+  background: #0b5ed7;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+  .filter-modal {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .filter-header h2 {
+    font-size: 22px;
+  }
+
+  .filter-actions {
+    flex-direction: column;
+  }
+
+  .filter-actions button {
+    width: 100%;
+  }
+}

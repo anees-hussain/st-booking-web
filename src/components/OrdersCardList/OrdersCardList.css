@@ -1,0 +1,64 @@
+/* ==========================================
+   CARD LIST
+========================================== */
+
+.orders-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.orders-loading {
+  background: #fff;
+  border-radius: 14px;
+  padding: 60px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #666;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   EMPTY
+========================================== */
+
+.orders-empty {
+  background: #fff;
+  border-radius: 14px;
+  padding: 60px;
+  text-align: center;
+  color: #777;
+  font-size: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .orders-card-list {
+    gap: 14px;
+    margin-top: 15px;
+  }
+
+}
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media (min-width: 769px) {
+
+  .orders-card-list {
+    display: none;
+  }
+
+}
