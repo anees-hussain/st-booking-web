@@ -1,0 +1,258 @@
+/* ==========================================
+   CARD
+========================================== */
+
+.order-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ececec;
+  transition: all 0.25s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.view-order-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+  color: #055160;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ececec;
+  transition: all 0.25s ease;
+}
+
+.view-order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.order-card-header h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #111827;
+  font-weight: 700;
+}
+
+.seller {
+  margin-top: 5px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.status-badge.submitted {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.delivered {
+  background: #cff4fc;
+  color: #055160;
+}
+
+.status-badge.paid {
+  background: #d1e7dd;
+  color: #0f5132;
+}
+
+.status-badge.cancelled {
+  background: #f8d7da;
+  color: #842029;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+.order-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: #374151;
+  font-size: 14px;
+}
+
+.info-row span:first-child {
+  width: 22px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.info-row a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.info-row a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   TOTAL
+========================================== */
+
+.order-total {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px dashed #d1d5db;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-total span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.order-total strong {
+  color: #198754;
+  font-size: 22px;
+}
+
+/* ==========================================
+   ACTIONS
+========================================== */
+
+.order-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.order-actions button {
+  flex: 1;
+  min-width: 90px;
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+/* EDIT */
+
+.edit-btn {
+  background: #0d6efd;
+  color: white;
+  padding: 10px 0;
+}
+
+.edit-btn:hover {
+  background: #0b5ed7;
+}
+
+/* DELIVER */
+
+.deliver-btn {
+  background: #198754;
+  color: white;
+  padding: 10px 0;
+}
+
+.deliver-btn:hover {
+  background: #157347;
+}
+
+/* PAID */
+
+.paid-btn {
+  background: #20c997;
+  color: white;
+  padding: 10px 0;
+}
+
+.paid-btn:hover {
+  background: #1aa179;
+}
+
+/* CANCEL */
+
+.cancel-btn {
+  background: #dc3545;
+  color: white;
+  padding: 10px 0;
+}
+
+.cancel-btn:hover {
+  background: #bb2d3b;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+  .order-card {
+    padding: 16px;
+  }
+
+  .order-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .status-badge {
+    align-self: flex-start;
+  }
+
+  .order-actions {
+    flex-direction: column;
+  }
+
+  .order-actions button {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media (min-width: 769px) {
+  .order-card {
+    max-width: 650px;
+    margin: auto;
+  }
+}
