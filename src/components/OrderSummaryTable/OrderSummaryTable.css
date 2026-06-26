@@ -1,0 +1,181 @@
+/* ==========================================
+   TABLE WRAPPER
+========================================== */
+
+.summary-table-wrapper {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 14px;
+  overflow-x: auto;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.summary-table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: collapse;
+}
+
+.summary-table thead {
+  background: #111827;
+}
+
+.summary-table th {
+  color: #fff;
+  padding: 15px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.summary-table td {
+  padding: 14px;
+  border-bottom: 1px solid #ececec;
+  font-size: 14px;
+  color: #333;
+}
+
+.summary-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ==========================================
+   COLUMNS
+========================================== */
+
+.qty-column {
+  text-align: center;
+  font-weight: 600;
+}
+
+.amount-column {
+  text-align: right;
+  font-weight: 700;
+  color: #198754;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.summary-table tfoot td {
+  background: #f3f4f6;
+  padding: 16px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.footer-title {
+  text-align: right;
+}
+
+.footer-qty {
+  text-align: center;
+}
+
+.footer-amount {
+  text-align: right;
+  color: #0d6efd;
+}
+
+/* ==========================================
+   EMPTY
+========================================== */
+
+.empty {
+  text-align: center;
+  padding: 50px;
+  color: #777;
+  font-size: 16px;
+}
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.table-loading {
+  background: white;
+  border-radius: 14px;
+  padding: 60px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #555;
+  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .summary-table-wrapper {
+    border-radius: 10px;
+  }
+
+  .summary-table {
+    min-width: 700px;
+  }
+
+  .summary-table th,
+  .summary-table td {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .footer-title,
+  .footer-qty,
+  .footer-amount {
+    font-size: 13px;
+  }
+
+}
+
+/* ==========================================
+   PRINT
+========================================== */
+
+@media print {
+
+  .summary-table-wrapper {
+    box-shadow: none;
+    border: none;
+    overflow: visible;
+  }
+
+  .summary-table {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .summary-table th,
+  .summary-table td {
+    border: 1px solid #000;
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .summary-table thead {
+    background: #f2f2f2 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .summary-table th {
+    color: #000 !important;
+  }
+
+  .summary-table tfoot td {
+    background: #f2f2f2 !important;
+    color: #000;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+}
