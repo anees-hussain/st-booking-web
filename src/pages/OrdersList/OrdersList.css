@@ -1,0 +1,236 @@
+/* ==========================================
+   PAGE
+========================================== */
+
+.orders-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+  padding: 30px;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.back-btn {
+  border: 1px solid #d8d8d8;
+  background: white;
+  color: #333;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.back-btn:hover {
+  background: #f5f5f5;
+}
+
+.add-btn {
+  background: #198754;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.add-btn:hover {
+  background: #157347;
+}
+
+/* ==========================================
+   TOOLBAR
+========================================== */
+
+.toolbar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 22px;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  height: 46px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  padding: 0 15px;
+  font-size: 15px;
+  outline: none;
+  transition: .25s;
+  background: white;
+}
+
+.search-input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13,110,253,.12);
+}
+
+.filter-btn {
+  height: 46px;
+  padding: 0 22px;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.filter-btn:hover {
+  background: #1f2937;
+}
+
+/* ==========================================
+   LOAD MORE
+========================================== */
+
+.load-more-btn {
+  display: block;
+  margin: 25px auto;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.load-more-btn:hover:not(:disabled) {
+  background: #0b5ed7;
+}
+
+.load-more-btn:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:768px) {
+
+  .orders-page {
+    padding: 15px;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .header-left {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .header-left h1 {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .back-btn,
+  .add-btn {
+    width: 100%;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+
+  .load-more-btn {
+    width: 100%;
+  }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (min-width:769px) and (max-width:1024px) {
+
+  .orders-page {
+    padding: 20px;
+  }
+
+}
+
+/* ==========================================
+   LARGE SCREEN
+========================================== */
+
+@media (min-width:1400px) {
+
+  .orders-page {
+    max-width: 1700px;
+    margin: auto;
+  }
+
+}
+
+/* ==========================================
+   PRINT
+========================================== */
+
+@media print {
+
+  .page-header,
+  .toolbar,
+  .load-more-btn {
+    display: none !important;
+  }
+
+  .orders-page {
+    background: white;
+    padding: 0;
+  }
+
+}

@@ -1,0 +1,130 @@
+/* ==========================================
+   PAGE
+========================================== */
+
+.order-details-page {
+  min-height: 100vh;
+  background: #f4f6f9;
+  padding: 30px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.order-details-card {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.order-details-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.order-details-title h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #111827;
+}
+
+.order-details-title p {
+  margin-top: 5px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.back-btn {
+  border: none;
+  background: #f3f4f6;
+  color: #111827;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .2s;
+}
+
+.back-btn:hover {
+  background: #e5e7eb;
+}
+
+/* ==========================================
+   SUMMARY
+========================================== */
+
+.order-summary-box {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.order-summary-box h3 {
+  margin-top: 0;
+}
+
+.order-summary-total {
+  font-size: 24px;
+  color: #198754;
+  font-weight: 700;
+}
+
+/* ==========================================
+   ACTIONS
+========================================== */
+
+.order-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.order-actions button {
+  flex: 1;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .order-details-page {
+    padding: 15px;
+  }
+
+  .order-details-card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .order-details-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-details-title h1 {
+    font-size: 24px;
+  }
+
+  .order-actions {
+    flex-direction: column;
+  }
+
+}

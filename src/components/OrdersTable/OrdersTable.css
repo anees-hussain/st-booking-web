@@ -1,0 +1,279 @@
+/* ==========================================
+   TABLE WRAPPER
+========================================== */
+
+.orders-table-wrapper {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 14px;
+  overflow-x: auto;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.orders-table {
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: collapse;
+}
+
+.orders-table thead {
+  background: #111827;
+}
+
+.orders-table th {
+  color: #fff;
+  padding: 15px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.orders-table td {
+  padding: 14px;
+  border-bottom: 1px solid #ececec;
+  font-size: 14px;
+  color: #333;
+  vertical-align: top;
+}
+
+.orders-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ==========================================
+   CUSTOMER
+========================================== */
+
+.orders-table td strong {
+  display: block;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.orders-table td small {
+  color: #777;
+  font-size: 12px;
+}
+
+/* ==========================================
+   AMOUNT
+========================================== */
+
+.amount {
+  color: #198754;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status.submitted {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.delivered {
+  background: #cff4fc;
+  color: #055160;
+}
+
+.status.paid {
+  background: #d1e7dd;
+  color: #0f5132;
+}
+
+.status.cancelled {
+  background: #f8d7da;
+  color: #842029;
+}
+
+/* ==========================================
+   ACTIONS
+========================================== */
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.action-buttons button {
+  border: none;
+  border-radius: 8px;
+  padding: 7px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.edit-btn {
+  background: #0d6efd;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background: #0b5ed7;
+}
+
+.deliver-btn {
+  background: #198754;
+  color: #fff;
+}
+
+.deliver-btn:hover {
+  background: #157347;
+}
+
+.paid-btn {
+  background: #20c997;
+  color: #fff;
+}
+
+.paid-btn:hover {
+  background: #1aa179;
+}
+
+.cancel-btn {
+  background: #dc3545;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background: #bb2d3b;
+}
+
+/* ==========================================
+   EMPTY
+========================================== */
+
+.orders-empty {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 60px;
+  text-align: center;
+  color: #777;
+  font-size: 17px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.orders-loading {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 60px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #555;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .orders-table-wrapper {
+    border-radius: 10px;
+  }
+
+  .orders-table {
+    min-width: 1100px;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .orders-table {
+    min-width: 1150px;
+  }
+
+}
+
+/* ==========================================
+   PRINT
+========================================== */
+
+@media print {
+
+  .orders-table-wrapper {
+    box-shadow: none;
+    border: none;
+    overflow: visible;
+  }
+
+  .orders-table {
+    width: 100%;
+    min-width: 100%;
+    border-collapse: collapse;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    border: 1px solid #000;
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .orders-table thead {
+    background: #f2f2f2 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .orders-table th {
+    color: #000 !important;
+  }
+
+  .status {
+    background: transparent !important;
+    color: #000 !important;
+    border: 1px solid #000;
+  }
+
+  .action-buttons {
+    display: none;
+  }
+
+}
