@@ -1,5 +1,10 @@
 import "./ProductModal.css";
 
+const user = JSON.parse(localStorage.getItem("user"));
+
+const canEditRate =
+  user?.designation === "controller" || user?.designation === "producer";
+
 const ProductModal = ({
   visible,
   onClose,
@@ -51,6 +56,24 @@ const ProductModal = ({
     });
   };
 
+  const updateProductRate = (productId, rate) => {
+    setSelectedProducts((prev) => {
+      const index = prev.findIndex((p) => p.product === productId);
+
+      if (index === -1) return prev;
+
+      const updated = [...prev];
+
+      if (rate === "") {
+        return prev;
+      } else {
+        updated[index].rate = Number(rate);
+      }
+
+      return updated;
+    });
+  };
+
   return (
     <div className="modal-overlay">
       <div className="modal">
@@ -79,6 +102,12 @@ const ProductModal = ({
           )}
 
           {filteredProducts.map((item) => {
+            const selected = selectedProducts.find(
+              (p) => p.product === item._id,
+            );
+
+            const rate = selected?.rate ?? item.rate;
+
             const qty = getProductQuantity(item._id);
 
             return (
@@ -88,7 +117,25 @@ const ProductModal = ({
 
                   <p>UOM : {item.uom}</p>
 
-                  <p>Rate : Rs. {item.rate}</p>
+                  {canEditRate && qty > 0 ? (
+                    <input
+                      className="rate-input"
+                      type="number"
+                      min="0"
+                      step="1"
+                      value={rate}
+                      onChange={(e) =>
+                        updateProductRate(item._id, e.target.value)
+                      }
+                    />
+                  ) : (
+                    <span>Rs. {rate}</span>
+                  )}
+
+                  <p>
+                    Subtotal : Rs.
+                    {(qty * rate).toLocaleString()}
+                  </p>
                 </div>
 
                 <div className="qty-section">
